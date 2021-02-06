@@ -17,11 +17,12 @@ class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        Handler().postDelayed({
+        this.supportActionBar?.hide()
+        Handler().postDelayed(
+            {
                 val i = Intent(this@SplashActivity, HomeActivity::class.java)
                 startActivity(i)
-             finish()
+                finish()
 
 
             }, 5000
